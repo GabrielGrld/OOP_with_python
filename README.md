@@ -16,7 +16,7 @@ largo de años con nuevas funcionalidades y nuevos algoritmos.
 Cuando se entrena una algoritmo de Machine Learning con Scikit-learn, no se necesita saber como los
 algoritmos funcionan o como estan escritos, es solo necesario  concentrarse en el modelado.
 
-#Objetos:
+# Objetos:
 
 Los objetos estan definidos por caracteristicas y acciones. 
 
@@ -32,7 +32,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 		- Frenar
 		
 
-#Vocabulario de la Programación Orientada a Objetos (OOP)
+# Vocabulario de la Programación Orientada a Objetos (OOP)
 
 	- **Clases**: A blueprint que consiste de metodos y atributos
 	- **Objetos**: Una instancia de una clase. Ejemplo en el mundo real sería un lapicero rojo, un pero 
@@ -49,7 +49,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 	NumPy y Scikit-learn.
 	
 	
-#Notas sobre OOP
+# Notas sobre OOP
 
 Set and Get methods
 
@@ -156,3 +156,66 @@ importaría la clase **Shirt** con una línea:
  from shirt import Shirt.
  ```
 
+# Commenting object-oriented code
+
+Un **docstring** es un tipo de comentario que describe como un modulo, funcion, clase o metódo de Python funciona. 
+**Docstring** no son propios unicamente de la programación orientada a objetos (**OOP**)
+
+Es importante usar **docstrings** y comentar el codigo desarrollado. De esta manera sera entendible y mantenible
+en el futuro. 
+
+## Docstrings and object-oriented code
+
+	* Se debe asegurar que el docstring este indentado correctamente, o el codigo no correra. Un docstring debería 
+	ser indentado con una indentación debajo de la clase o metodo que esta siendo descrito.
+	* No se debe definir **self** en el metodo de you docstrings. Se entiende que cualquier metódo tendrá **self**
+	como el primer valor de ingreso (input).
+```	
+	class Pants:
+    """The Pants class represents an article of clothing sold in a store
+    """
+
+    def __init__(self, color, waist_size, length, price):
+        """Method for initializing a Pants object
+
+        Args: 
+            color (str)
+            waist_size (int)
+            length (int)
+            price (float)
+
+        Attributes:
+            color (str): color of a pants object
+            waist_size (str): waist size of a pants object
+            length (str): length of a pants object
+            price (float): price of a pants object
+        """
+
+        self.color = color
+        self.waist_size = waist_size
+        self.length = length
+        self.price = price
+
+    def change_price(self, new_price):
+        """The change_price method changes the price attribute of a pants object
+
+        Args: 
+            new_price (float): the new price of the pants object
+
+        Returns: None
+
+        """
+        self.price = new_price
+
+    def discount(self, percentage):
+        """The discount method outputs a discounted price of a pants object
+
+        Args:
+            percentage (float): a decimal representing the amount to discount
+
+        Returns:
+            float: the discounted price
+        """
+        return self.price * (1 - percentage)
+```
+source: Introduction to Object-Oriented- Programming, Udacity
