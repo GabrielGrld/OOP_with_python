@@ -16,7 +16,7 @@ largo de años con nuevas funcionalidades y nuevos algoritmos.
 Cuando se entrena una algoritmo de Machine Learning con Scikit-learn, no se necesita saber como los
 algoritmos funcionan o como estan escritos, es solo necesario  concentrarse en el modelado.
 
-##Objetos:
+Objetos:
 
 Los objetos estan definidos por caracteristicas y acciones. 
 
@@ -32,7 +32,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 		- Frenar
 		
 
-##Vocabulario de la Programación Orientada a Objetos (OOP)
+Vocabulario de la Programación Orientada a Objetos (OOP)
 
 	- **Clases:** A blueprint que consiste de metodos y atributos
 	- **Objetos:** Una instancia de una clase. Ejemplo en el mundo real sería un lapicero rojo, un pero 
@@ -47,4 +47,113 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 	programación orientada a objetos,  esta entidad singular es llamada una clase. La encapsulación 
 	permite esconder detalles de implementación, muy similar a como funcionan paquetes de Python como 
 	NumPy y Scikit-learn.
+	
+	
+Notas sobre OOP
 
+Set and Get methods
+
+Acceder atributos en Python es ciertamente difirente a comparación de otros lenguajes de programación como Java
+y C++. 
+```
+	class Shirt:
+
+		def __init__(self, shirt_color, shirt_size, shirt_style, shirt_price):
+			self.color = shirt_color
+			self.size = shirt_size
+			self.style = shirt_style
+			self.price = shirt_price
+		
+		def change_price(self, new_price):
+		
+			self.price = new_price
+			
+		def discount(self, discount):
+
+			return self.price * (1 - discount)
+```
+
+La clase Shirt tiene un metodo para cambiar el precio de la camiseta: shirt_one.chane_price(25).
+En python,  también se puede cambiar los valores del un atributo con la siguiente sintaxis:
+
+	shirt_one.price = 15
+	shirt_one.price = 25
+	shirt_one.color = 'blue'
+	shirt_one.size = 'L'
+	shirt_one.style = 'short_sleeve'
+	
+Este código accede y cambia directamente los atributos de precio, color, tamaño y estilo.
+ Acceder a los atributos directamente estaría mal visto en muchos otros lenguajes, pero no en Python.
+En cambio, la convención general de programación orientada a objetos es utilizar métodos para acceder 
+a los atributos o cambiar los valores de los atributos. Estos métodos se denominan métodos **set** y **get** 
+o métodos **setter** y **getter**.
+
+Un método **get** es para obtener un valor de atributo. Un método **set** es para cambiar el valor de un atributo.
+ Si estuviera escribiendo una clase de camisa, podría usar el siguiente código:
+ ```
+	 class Shirt:
+
+		def __init__(self, shirt_color, shirt_size, shirt_style, shirt_price):
+			self._price = shirt_price
+
+		def get_price(self):
+		  return self._price
+
+		def set_price(self, new_price):
+		  self._price = new_price
+```
+Cuando se instancia y usa un objeto se obtiene un codigo que podría ser el siguiente:
+```
+	shirt_one = Shirt('blue', 'S', 'short-sleeve', 20)
+	print(shirt_one.get_price())
+	shirt_one.set_price(12)
+```
+
+En la definición delas clases, al guión bajo al frente de **price** es de alguna manera controversial en Python, 
+en otros lenguajes como Java y C++, **price** podría ser declarada como una variable privada.  Lo cúal prevendría
+un objeto de acceder al atributo directamente como **shirt_one._price=15**. A diferencia de otros lenguajes, Python 
+no distingue entre variables publicas y privadas. Por lo tanto existe cierta controversia acerca de usar la convención
+de guión bajo como también los metodos **get** y **set** en Python.
+
+Siguiendo la convención de Python, el subrayado delante del precio es para que un programador sepa que solo se debe
+ acceder al precio con los métodos **get** y **set** en lugar de acceder al precio directamente con **shirt_one._price**. Sin 
+ embargo, un programador aún podría acceder a **_price** directamente porque no hay nada en el lenguaje Python que 
+ impida el acceso directo.
+ 
+ Mas información acerca de los metódos **get** and **set** puede ser consultada en esta pagina [OOP Python Tutorial](https://www.python-course.eu/python3_properties.php).
+
+En términos de programación orientada a objetos, las reglas en Python son un poco más flexibles que en otros lenguajes de programación.
+ Como se mencionó anteriormente, en algunos lenguajes, como Java, puede indicar explícitamente si se debe permitir o no que un objeto
+ cambie o acceda a los valores de un atributo directamente. Python no tiene esta opción.
+
+¿Por qué sería mejor cambiar un valor con un método en lugar de hacerlo directamente? Cambiar valores a través de un método le brinda más
+ flexibilidad a largo plazo. ¿Qué pasa si las unidades de medida cambian, como si la función para calcular distancia esta en millas y se 
+ necesita luego que todas las distancias se calculen en ilometros,ejemplo de esto sería:
+ 
+ Medida tomada esta en millas
+ ```
+ distance_one.measure = 10
+ ```
+ Para cambiarlo a kilometros habría que hacerlo manualmente en cada distancia
+ ```
+ distance_une.measure = 16.09
+ ```
+ Si se hubiese usado un metodo, unicamente se tendría que cambiar el metodo para convertir de millas a kilometros
+ 
+ 
+	def change_measure(self, new_measure):
+		self.measure = new_measure * 1.61 # convertir millas a kilometros
+
+	distance_one.change_measure(10)
+ 
+ 
+Código modularizado
+
+Si se estuviera desarrollando un programa de software, y se quisiera modularizar este código. Colocaría la clase **Shirt** en su propia secuencia
+ de comandos de Python, que podría llamar **shirt.py**. En otro script de Python, importaría la clase **Shirt** con una línea:
+```
+ from shirt import Shirt.
+ ```
+
+ 
+  
