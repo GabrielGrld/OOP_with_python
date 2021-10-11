@@ -18,7 +18,7 @@ algoritmos funcionan o como estan escritos, es solo necesario  concentrarse en e
 
 # Objetos:
 
-Los objetos estan definidos por caracteristicas y acciones. 
+Los objetos estan definidos por caracteristicas (**Attributes**) y acciones (**Methods**). 
 
 Ejemplo de caracteristicas y acciones para un vehiculo:
 
@@ -107,6 +107,13 @@ Cuando se instancia y usa un objeto se obtiene un codigo que podría ser el sigu
 	shirt_one = Shirt('blue', 'S', 'short-sleeve', 20)
 	print(shirt_one.get_price())
 	shirt_one.set_price(12)
+	
+	Se obtienes:
+		20
+	Y luego se cambia el atributo price a valor 12
+	print(shirt_one.get_price())
+	12
+	
 ```
 
 En la definición delas clases, al guión bajo al frente de **price** es de alguna manera controversial en Python, 
@@ -220,6 +227,16 @@ en el futuro.
 ```
 source: Introduction to Object-Oriented- Programming, Udacity
 
+
+
+## Métodos Magicos (Dunder or Magic Methods)
+
+Esta funcionalidad permite  realizar sobrecarga de Métodos, lo que significa modificar las operadores con los que python   cuenta por defecto
+Los Métodos magicos (también conocidos como Métodos Dunder) tienes dos guiones bajos al inicio y final del nombre del métodos.
+Algunos ejemplos de Métodos magicos son:  \_\_init\_\_, \_\_add\_\_, \_\_len\_\_, \_\_repr\_\_ entre otros.
+Esto es muy útil cuando se esta desarrollando una clase particular que requiere una operación particular. Por lo cual operadores que ya
+vienen construidos no permitirian hacer las operaciones deseadas entre estás clases.
+
 ## Herencia en OOP Python
 
 La  herencia consiste de una clase mas general la cual tiene definido unos Métodos y atributos que son comunes
@@ -245,11 +262,3 @@ clases hijas (**Child Class**).
 
 Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
 agregar atributos y Métodos propios de estás clases. 
-
-## Métodos Magicos (Dunder or Magic Methods)
-
-Esta funcionalidad permite  realizar sobrecarga de Métodos, lo que significa modificar las operadores con los que python   cuenta por defecto
-Los Métodos magicos (también conocidos como Métodos Dunder) tienes dos guiones bajos al inicio y final del nombre del métodos.
-Algunos ejemplos de Métodos magicos son:  \_\_init\_\_, \_\_add\_\_, \_\_len\_\_, \_\_repr\_\_ entre otros.
-Esto es muy útil cuando se esta desarrollando una clase particular que requiere una operación particular. Por lo cual operadores que ya
-vienen construidos no permitirian hacer las operaciones deseadas entre estás clases.
