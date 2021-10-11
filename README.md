@@ -34,7 +34,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 
 # Vocabulario de la Programación Orientada a Objetos (OOP)
 
-	- **Clases**: A blueprint que consiste de metodos y atributos
+	- **Clases**: A blueprint que consiste de Métodos y atributos
 	- **Objetos**: Una instancia de una clase. Ejemplo en el mundo real sería un lapicero rojo, un pero 
 	pequeño, o una camisa azul
 	- **Atributos**: Un descriptor o caracteristica, ejemplo de esto sería color, longitud, tamaño, 
@@ -73,7 +73,7 @@ y C++.
 			return self.price * (1 - discount)
 ```
 
-La clase Shirt tiene un metodo para cambiar el precio de la camiseta: shirt_one.chane_price(25).
+La clase Shirt tiene un método para cambiar el precio de la camiseta: shirt_one.chane_price(25).
 En python,  también se puede cambiar los valores del un atributo con la siguiente sintaxis:
 
 	shirt_one.price = 15
@@ -113,7 +113,7 @@ En la definición delas clases, al guión bajo al frente de **price** es de algu
 en otros lenguajes como Java y C++, **price** podría ser declarada como una variable privada.  Lo cúal prevendría
 un objeto de acceder al atributo directamente como **shirt_one._price=15**. A diferencia de otros lenguajes, Python 
 no distingue entre variables publicas y privadas. Por lo tanto existe cierta controversia acerca de usar la convención
-de guión bajo como también los metodos **get** y **set** en Python.
+de guión bajo como también los Métodos **get** y **set** en Python.
 
 Siguiendo la convención de Python, el subrayado delante del precio es para que un programador sepa que solo se debe
  acceder al precio con los métodos **get** y **set** en lugar de acceder al precio directamente con **shirt_one._price**. Sin 
@@ -138,7 +138,7 @@ En términos de programación orientada a objetos, las reglas en Python son un p
  ```
  distance_une.measure = 16.09
  ```
- Si se hubiese usado un metodo, unicamente se tendría que cambiar el metodo para convertir de millas a kilometros
+ Si se hubiese usado un método, unicamente se tendría que cambiar el métodos para convertir de millas a kilometros
  
  
 	def change_measure(self, new_measure):
@@ -167,8 +167,8 @@ en el futuro.
 ## Docstrings and object-oriented code
 
 	* Se debe asegurar que el docstring este indentado correctamente, o el codigo no correra. Un docstring debería 
-	ser indentado con una indentación debajo de la clase o metodo que esta siendo descrito.
-	* No se debe definir **self** en el metodo de you docstrings. Se entiende que cualquier metódo tendrá **self**
+	ser indentado con una indentación debajo de la clase o métodos que esta siendo descrito.
+	* No se debe definir **self** en el métodos de you docstrings. Se entiende que cualquier metódo tendrá **self**
 	como el primer valor de ingreso (input).
 ```	
 	class Pants:
@@ -222,9 +222,9 @@ source: Introduction to Object-Oriented- Programming, Udacity
 
 ## Herencia en OOP Python
 
-La  herencia consiste de una clase mas general la cual tiene definido unos metodos y atributos que son comunes
+La  herencia consiste de una clase mas general la cual tiene definido unos Métodos y atributos que son comunes
 entros las clases hijas. Un ejemplo de lo anterior sería una clase Padre **Prendas_Vestir** la cual contiene los siguientes 
-atributos y metodos:
+atributos y Métodos:
 
 	- **Prendas_Vestir**
 		- *Atributos*
@@ -232,7 +232,7 @@ atributos y metodos:
 			-tamaño
 			-estilo
 			-precio
-		- *Metodos*
+		- *Métodos*
 			- cambiar_precio()
 			- precio_descuento()
 			
@@ -240,16 +240,16 @@ Todo los campos anteriores serian comunes a clases como *Camisas*, *Pantalon*, *
 
 Observando lo anterior se puede preguntar por que codificar cada Clase por si misma, cuando todas estas tienen tanto en común, 
 de esta manera se llega a la conclusión de que es posible codificar o programar una clase superior **Prendas_Vestir**, de la cual heredaran
-las clases *Camisas*, *Pantalon*, *Medias* y  *Vestido* sus atributos y metodos. Esto se puede ver como la clase padre (**Parent Class**) tiene 
+las clases *Camisas*, *Pantalon*, *Medias* y  *Vestido* sus atributos y Métodos. Esto se puede ver como la clase padre (**Parent Class**) tiene 
 clases hijas (**Child Class**).
 
 Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
-agregar atributos y metodos propios de estás clases. 
+agregar atributos y Métodos propios de estás clases. 
 
-## Metodos Magicos (Dunder or Magic Methods)
+## Métodos Magicos (Dunder or Magic Methods)
 
-Esta funcionalidad permite  realizar sobrecarga de metodos, lo que significa modificar las operadores con los que python   cuenta por defecto
-Los metodos magicos (también conocidos como metodos Dunder) tienes dos guiones bajos al inicio y final del nombre del metodo.
-Algunos ejemplos de metodos magicos son:  __init__, __add__, __len__, __repr__ entre otros.
+Esta funcionalidad permite  realizar sobrecarga de Métodos, lo que significa modificar las operadores con los que python   cuenta por defecto
+Los Métodos magicos (también conocidos como Métodos Dunder) tienes dos guiones bajos al inicio y final del nombre del métodos.
+Algunos ejemplos de Métodos magicos son:  \_\_init\_\_, \_\_add\_\_, \_\_len\_\_, \_\_repr\_\_ entre otros.
 Esto es muy útil cuando se esta desarrollando una clase particular que requiere una operación particular. Por lo cual operadores que ya
 vienen construidos no permitirian hacer las operaciones deseadas entre estás clases.
