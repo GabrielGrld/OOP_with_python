@@ -219,3 +219,29 @@ en el futuro.
         return self.price * (1 - percentage)
 ```
 source: Introduction to Object-Oriented- Programming, Udacity
+
+## Herencia en OOP Python
+
+La  herencia consiste de una clase mas general la cual tiene definido unos metodos y atributos que son comunes
+entros las clases hijas. Un ejemplo de lo anterior sería una clase Padre **Prendas_Vestir** la cual contiene los siguientes 
+atributos y metodos:
+
+	- **Prendas_Vestir**
+		- *Atributos*
+			-color
+			-tamaño
+			-estilo
+			-precio
+		- *Metodos*
+			- cambiar_precio()
+			- precio_descuento()
+			
+Todo los campos anteriores serian comunes a clases como *Camisas*, *Pantalon*, *Medias*, *Vestido*
+
+Observando lo anterior se puede preguntar por que codificar cada Clase por si misma, cuando todas estas tienen tanto en común, 
+de esta manera se llega a la conclusión de que es posible codificar o programar una clase superior **Prendas_Vestir**, de la cual heredaran
+las clases *Camisas*, *Pantalon*, *Medias* y  *Vestido* sus atributos y metodos. Esto se puede ver como la clase padre (**Parent Class**) tiene 
+clases hijas (**Child Class**).
+
+Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
+agregar atributos y metodos propios de estás clases. 
