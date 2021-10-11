@@ -245,3 +245,11 @@ clases hijas (**Child Class**).
 
 Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
 agregar atributos y metodos propios de estás clases. 
+
+## Metodos Magicos (Dunder or Magic Methods)
+
+Esta funcionalidad permite  realizar sobrecarga de metodos, lo que significa modificar las operadores con los que python   cuenta por defecto
+Los metodos magicos (también conocidos como metodos Dunder) tienes dos guiones bajos al inicio y final del nombre del metodo.
+Algunos ejemplos de metodos magicos son:  __init__, __add__, __len__, __repr__ entre otros.
+Esto es muy útil cuando se esta desarrollando una clase particular que requiere una operación particular. Por lo cual operadores que ya
+vienen construidos no permitirian hacer las operaciones deseadas entre estás clases.
