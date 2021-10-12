@@ -297,4 +297,22 @@ La siguiente lista de recursos puede ser usada para aprender mas acerca de temas
 [Mixins for Fun and Profit](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556): Una clase que hereda de multiples clase padres.
 [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/): Decoradores es un camino corto para usar fotos dentro de otras funciones
 	
-	
+## Creando un Paquete (Making a Package)
+
+Un paquete es una colección de módulos de Python. Aunque el [código](https://github.com/GabrielGrld/OOP_with_python/tree/main/making_a_pythonPackage) anterior ya puede parecer un paquete de Python porque contiene varios 
+archivos, un paquete de Python también necesita un archivo __init__.py. En esta sección, aprenderá cómo crear este archivo __init__.py y 
+luego instalar el paquete en su instalación local de Python.
+
+**pip** es un __administrador__ __de__ __paquetes__ __de__ __Python__ [Python package manager](https://pip.pypa.io/en/stable/) que ayuda a instalar y desinstalar paquetes de Python. Es posible que 
+haya usado pip para instalar paquetes usando la línea de comando: pip install numpy. Cuando se ejecuta un comando como pip install numpy, pip descarga el paquete 
+ desde un repositorio de paquetes de Python llamado [PyPi](https://pypi.org/).
+
+## Programación orientada a objetos y paquetes de Python
+
+Un paquete de Python no necesita utilizar programación orientada a objetos. Simplemente podría tener un módulo de Python 
+con un conjunto de funciones. Sin embargo, la mayoría, si no todos, de los paquetes populares de Python aprovechan la 
+programación orientada a objetos por algunas razones:
+
+- Los programas orientados a objetos son relativamente fáciles de expandir, especialmente debido a la herencia.
+- Los programas orientados a objetos ocultan la funcionalidad al usuario. Considere los paquetes scipy. No necesita
+ saber cómo funciona el código real para usar sus clases y métodos.
