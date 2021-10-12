@@ -292,9 +292,9 @@ orientada a objetos.
 
 La siguiente lista de recursos puede ser usada para aprender mas acerca de temas avanzados de programación orientada a objetos en Python. 
 
-	- [Python's Instance, Class, and Static Methods Demystified](https://realpython.com/instance-class-and-static-methods-demystified/): Different types of methods that can be accessed at the class or object level.
-	- [Class and Instance Attributes](https://www.python-course.eu/python3_class_and_instance_attributes.php): Se puede definir atributos a nivel de clase or a nivel de instancia
-	- [Mixins for Fun and Profit](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556): Una clase que hereda de multiples clase padres.
-	- [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/): Decoradores es un camino corto para usar fotos dentro de otras funciones
+[Python's Instance, Class, and Static Methods Demystified](https://realpython.com/instance-class-and-static-methods-demystified/): Different types of methods that can be accessed at the class or object level.
+[Class and Instance Attributes](https://www.python-course.eu/python3_class_and_instance_attributes.php): Se puede definir atributos a nivel de clase or a nivel de instancia
+[Mixins for Fun and Profit](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556): Una clase que hereda de multiples clase padres.
+[Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/): Decoradores es un camino corto para usar fotos dentro de otras funciones
 	
 	
