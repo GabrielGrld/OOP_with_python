@@ -16,7 +16,7 @@ largo de años con nuevas funcionalidades y nuevos algoritmos.
 Cuando se entrena una algoritmo de Machine Learning con Scikit-learn, no se necesita saber como los
 algoritmos funcionan o como estan escritos, es solo necesario  concentrarse en el modelado.
 
-# Objetos:
+## Objetos:
 
 Los objetos estan definidos por caracteristicas (**Attributes**) y acciones (**Methods**). 
 
@@ -32,7 +32,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 		- Frenar
 		
 
-# Vocabulario de la Programación Orientada a Objetos (OOP)
+## Vocabulario de la Programación Orientada a Objetos (OOP)
 
 	- **Clases**: A blueprint que consiste de Métodos y atributos
 	- **Objetos**: Una instancia de una clase. Ejemplo en el mundo real sería un lapicero rojo, un pero 
@@ -49,7 +49,7 @@ Ejemplo de caracteristicas y acciones para un vehiculo:
 	NumPy y Scikit-learn.
 	
 	
-# Notas sobre OOP
+## Notas sobre OOP
 
 Set and Get methods
 
@@ -163,7 +163,7 @@ importaría la clase **Shirt** con una línea:
  from shirt import Shirt.
  ```
 
-# Commenting object-oriented code
+## Commenting object-oriented code
 
 Un **docstring** es un tipo de comentario que describe como un modulo, funcion, clase o metódo de Python funciona. 
 **Docstring** no son propios unicamente de la programación orientada a objetos (**OOP**)
@@ -171,7 +171,7 @@ Un **docstring** es un tipo de comentario que describe como un modulo, funcion, 
 Es importante usar **docstrings** y comentar el codigo desarrollado. De esta manera sera entendible y mantenible
 en el futuro. 
 
-## Docstrings and object-oriented code
+### Docstrings and object-oriented code
 
 	* Se debe asegurar que el docstring este indentado correctamente, o el codigo no correra. Un docstring debería 
 	ser indentado con una indentación debajo de la clase o métodos que esta siendo descrito.
@@ -263,3 +263,38 @@ clases hijas (**Child Class**).
 Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
 agregar atributos y Métodos propios de estás clases. 
 
+## Código Modularizado (Moduralized Code)
+
+En Python un modulo es un archivo individual de Python que contiene una colección de funciones, clases y/o variables globales, son llamados 
+modulos por que son modulares, esto significa que estos modulos pueden ser reutilizados en diferentes aplicaciones. Un paquete es esencialmente
+una colección de modulos ubicados en un directorio. un ejemplo de lo anterior se puede ver en la siguiente linea de condigo:
+
+```
+from generaldistribution import Distribution
+
+```
+En la anterior línea de código le estamos pidiendo a Python que busque en el archivo **generaldistribution.py** que importe la clase **Distribution**
+con con sus atributos y metódos para ser usados en el archivo que tiene esa linea. 
+
+## Tópicos Avanzados de POO (Advanced OOP topics)
+
+Herencia es el ultimo tema en esta lección. Hasta ahora se ha revisado
+
+	- Clases y Objetos (Classes and objects)
+	- Atributos y metódos (Attributes and methods)
+	- Metódos Magicos (Magic methods)
+	- Herencia  (Inheritance)
+	
+Clases, objetos, atributos, metódos, y herencia son comunes a todos los lenguajes de programación orientados a objetos.
+
+Conocer esto temas es suficiente para comenzar a escribir software orientado a objetos. Sin embargo esto es solamente los temas basicos para la programación 
+orientada a objetos.
+
+La siguiente lista de recursos puede ser usada para aprender mas acerca de temas avanzados de programación orientada a objetos en Python. 
+
+	- [Python's Instance, Class, and Static Methods Demystified](https://realpython.com/instance-class-and-static-methods-demystified/): Different types of methods that can be accessed at the class or object level.
+	- [Class and Instance Attributes](https://www.python-course.eu/python3_class_and_instance_attributes.php): Se puede definir atributos a nivel de clase or a nivel de instancia
+	- [Mixins for Fun and Profit](https://easyaspython.com/mixins-for-fun-and-profit-cb9962760556): Una clase que hereda de multiples clase padres.
+	- [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/): Decoradores es un camino corto para usar fotos dentro de otras funciones
+	
+	
