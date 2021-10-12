@@ -314,5 +314,5 @@ con un conjunto de funciones. Sin embargo, la mayoría, si no todos, de los paqu
 programación orientada a objetos por algunas razones:
 
 - Los programas orientados a objetos son relativamente fáciles de expandir, especialmente debido a la herencia.
-- Los programas orientados a objetos ocultan la funcionalidad al usuario. Considere los paquetes scipy. No necesita
+- Los programas orientados a objetos ocultan la funcionalidad al usuario. Considerese los paquetes scipy. No se necesita
  saber cómo funciona el código real para usar sus clases y métodos.

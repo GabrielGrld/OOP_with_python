@@ -5,6 +5,9 @@
 !.vscode/extensions.json
 *.code-workspace
 .vs/*
+
+**/env_test2/*
+**/testing_venv/*
 Notes_about_PythonEnvironments.md
 # Local History for Visual Studio Code
 .history/
