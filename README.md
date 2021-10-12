@@ -262,3 +262,4 @@ clases hijas (**Child Class**).
 
 Un beneficio de lo anterior es que es posible crear otras clases hijas a partir de la clase padre. En ciertos ocasiones será necesario 
 agregar atributos y Métodos propios de estás clases. 
+
